@@ -1,5 +1,5 @@
 {
-    "features": {
-        "ghcr.io/pmalacho-mit/devcontainer-features/git-subrepo:latest": {},
-    },
+  "features": {
+    "ghcr.io/pmalacho-mit/devcontainer-features/git-subrepo:latest": {},
+  },
 }
