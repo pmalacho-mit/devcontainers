@@ -1,9 +1,9 @@
 {
-    "customizations": {
-        "vscode": {
-            "settings": {
-                "editor.tabSize": 2,
-            },
-        }
-    },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.tabSize": 2,
+      },
+    }
+  },
 }
