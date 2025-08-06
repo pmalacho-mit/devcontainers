@@ -2,28 +2,28 @@
 set -euo pipefail
 
 # USAGE: merge-sources.sh <file1.json> [file2.json ...] > merged.json
+#
+# Recursively collects all JSON files extended by each input file (using list-sources.sh),
+# then merges their contents in order using a deep merge strategy via jq.
+# The result is a single merged JSON object, with "extends" keys stripped from each input.
+# Useful for combining layered configuration files that use "extends" inheritance.
 
-# 1) Figure out where *this* script lives
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+self_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+list_script_file="$self_dir/list-sources.sh"
 
-# 2) Build the path to list-sources.sh
-LIST_SCRIPT="$SCRIPT_DIR/list-sources.sh"
-
-# 3) For each input file, collect sources
 all_files=()
-for child in "$@"; do
-  mapfile -t files < <("$LIST_SCRIPT" "$child")
-  child_dir="$(cd "$(dirname "$child")" && pwd)"
+for src in "$@"; do
+  mapfile -t files < <("$list_script_file" "$src")
+  src_dir="$(cd "$(dirname "$src")" && pwd)"
   for f in "${files[@]}"; do
     if [[ "$f" = /* ]]; then
       all_files+=("$f")
     else
-      all_files+=("$child_dir/$f")
+      all_files+=("$src_dir/$f")
     fi
   done
 done
 
-# 5) merge via jq
 jq -s '
   def deep_merge($val1; $val2):
     [($val1, $val2) | type] as $types |

@@ -1,17 +1,20 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-MERGE_SCRIPT=$(realpath "$SCRIPT_DIR/../../merge-sources.sh")
+self_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+test_script=$(realpath "$self_dir/../../merge-sources.sh")
 
-CASES=("array" "object" "primitive")
+cases=($(find "$self_dir" -mindepth 1 -maxdepth 1 -type d))
 
-for TEST in "${CASES[@]}"; do
-  TEST_PATH="$SCRIPT_DIR/$TEST"
-  TEST_FILES=("$TEST_PATH"/{a,b}.json)
-  EXPECTED_FILE="$TEST_PATH/expected.json"
-  if ! "$MERGE_SCRIPT" "${TEST_FILES[@]}" | diff --ignore-all-space - "$EXPECTED_FILE"; then
-    echo "Test failed for case: $TEST. Output differs from expected." >&2
+indent="  "
+
+for test in "${cases[@]}"; do
+  test_case=$(basename "$test")
+  echo "$indent Running case: $test_case"
+  test_files=("$test"/{a,b}.json)
+  expected_file="$test/expected.json"
+  if ! "$test_script" "${test_files[@]}" | diff --ignore-all-space - "$expected_file"; then
+    echo "Test failed for case: $test_case. Output differs from expected." >&2
     exit 1
   fi
 done

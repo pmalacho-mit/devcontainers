@@ -2,15 +2,15 @@
 set -euo pipefail
 
 # USAGE: list-sources.sh <file.json>
+#
 # Recursively lists all files that are `extended` by the given JSON file,
 # Prints each file (one per line), in merge order, relative to the file.json's directory.
-# Includes the file itself at the end (so processing a file with no extends will simply print its own name).
+# Includes the file itself at the end (so processing a file with no extends will simply output its own name).
 
-child="$1"
-base_dir="$(dirname "$child")"
+src="$1"
+base_dir="$(dirname "$src")"
 declare -A seen
 
-# Resolve an absolute path and then print it relative to base_dir
 relpath() {
   realpath --relative-to="$base_dir" "$1"
 }
@@ -20,7 +20,7 @@ process() {
   local f="$1"
   # canonicalize
   f="$(realpath "$f")"
-  # if f is a directory, use index.json inside it
+  # if f is a directory, iterate through its .json files
   if [[ -d "$f" ]]; then
     for jf in "$f"/*.json; do
       # skip if no .json files found
@@ -49,4 +49,4 @@ process() {
   echo "$rel"
 }
 
-process "$child"
+process "$src"
