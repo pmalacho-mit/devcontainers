@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "./image.ubuntu-24.json",
+    "./feature.git-subrepo.json",
+    "./feature.node-20.json",
+    "./customization.tab-size-2.json",
+    "./customization.format-on-save.json",
+  ]
+}
