@@ -1,6 +1,6 @@
 {
   "extends": [
     "./devcontainer.common.json",
-    "./feature.node-20.json"
+    "./python-3.12"
   ]
 }

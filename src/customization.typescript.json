@@ -4,12 +4,12 @@
       "settings": {
         "[typescript]": {
           "editor.defaultFormatter": "esbenp.prettier-vscode"
-        },
+        }
       },
       "extensions": [
         "ms-vscode.vscode-typescript-next",
-        "esbenp.prettier-vscode",
+        "esbenp.prettier-vscode"
       ]
     }
-  },
+  }
 }

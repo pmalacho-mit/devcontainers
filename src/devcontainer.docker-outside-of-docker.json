@@ -1,6 +1,6 @@
 {
   "extends": [
     "./devcontainer.common.json",
-    "./feature.node-20.json"
+    "./docker-outside-of-docker"
   ]
 }

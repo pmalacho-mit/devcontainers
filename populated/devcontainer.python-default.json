@@ -1,0 +1,29 @@
+{
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.black-formatter"
+      ],
+      "settings": {
+        "[python]": {
+          "editor.defaultFormatter": "ms-python.black-formatter"
+        },
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2,
+        "python.formatting.blackArgs": [
+          "--line-length=88"
+        ],
+        "python.formatting.provider": "black"
+      }
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.12"
+    },
+    "ghcr.io/pmalacho-mit/devcontainer-features/git-subrepo:latest": {}
+  },
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04"
+}
