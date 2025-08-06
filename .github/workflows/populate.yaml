@@ -1,0 +1,34 @@
+name: Populate Devcontainers
+on:
+  push:
+    branches:
+      - "*"
+jobs:
+  populate:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-actions[bot]'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up Git user
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      - name: Run populate-devcontainers.sh
+        run: ./scripts/populate-devcontainers.sh
+      - name: Check for changes in populated/
+        id: changes
+        run: |
+          if [[ -n $(git status --porcelain=1 populated/) ]]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+      - name: Commit and push changes
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git add populated/
+          git commit -m "chore: update populated devcontainers [skip ci]"
+          git push origin HEAD:${{ github.ref_name }}
