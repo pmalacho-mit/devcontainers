@@ -1,8 +1,7 @@
 name: Populate Devcontainers
-on:
-  push:
-    branches:
-      - "*"
+on: [push]
+permissions:
+  contents: write
 jobs:
   populate:
     runs-on: ubuntu-latest
@@ -18,17 +17,9 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
       - name: Run populate-devcontainers.sh
         run: ./scripts/populate-devcontainers.sh
-      - name: Check for changes in populated/
-        id: changes
-        run: |
-          if [[ -n $(git status --porcelain=1 populated/) ]]; then
-            echo "changed=true" >> $GITHUB_OUTPUT
-          else
-            echo "changed=false" >> $GITHUB_OUTPUT
-          fi
       - name: Commit and push changes
         if: steps.changes.outputs.changed == 'true'
-        run: |
-          git add populated/
-          git commit -m "chore: update populated devcontainers [skip ci]"
-          git push origin HEAD:${{ github.ref_name }}
+        uses: stefanzweifel/git-auto-commit-action@v6
+        with:
+          commit_message: "chore: update populated devcontainers [skip ci]"
+          file_pattern: 'populated/devcontainer.*.json'
