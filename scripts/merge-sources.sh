@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# USAGE: merge-sources.sh <file.json> > merged.json
+# USAGE: merge-sources.sh <file1.json> [file2.json ...] > merged.json
 
 # 1) Figure out where *this* script lives
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -9,24 +9,21 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # 2) Build the path to list-sources.sh
 LIST_SCRIPT="$SCRIPT_DIR/list-sources.sh"
 
-# 3) Now use it, passing along the child.json
-child="$1"
-mapfile -t files < <("$LIST_SCRIPT" "$child")
-
-
-# 4) Convert relative paths to absolute paths
-abs_files=()
-child_dir="$(cd "$(dirname "$child")" && pwd)"
-for f in "${files[@]}"; do
-  if [[ "$f" = /* ]]; then
-    abs_files+=("$f")
-  else
-    abs_files+=("$child_dir/$f")
-  fi
+# 3) For each input file, collect sources
+all_files=()
+for child in "$@"; do
+  mapfile -t files < <("$LIST_SCRIPT" "$child")
+  child_dir="$(cd "$(dirname "$child")" && pwd)"
+  for f in "${files[@]}"; do
+    if [[ "$f" = /* ]]; then
+      all_files+=("$f")
+    else
+      all_files+=("$child_dir/$f")
+    fi
+  done
 done
 
 # 5) merge via jq
-
 jq -s '
   def deep_merge($val1; $val2):
     [($val1, $val2) | type] as $types |
@@ -44,7 +41,7 @@ jq -s '
         $val1 + $val2
     else
         # use default merge
-        $val1 * $val2
+        $val1 // $val2
     end
     ;
 
@@ -53,4 +50,4 @@ jq -s '
     {};
     deep_merge(. ; $item | del(.extends))
   )
-' "${abs_files[@]}"
+' "${all_files[@]}"

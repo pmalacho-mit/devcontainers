@@ -1,0 +1,1 @@
+This test demonstrates that in the case of a key collision (on a primitive value), the first value will be preserved. 

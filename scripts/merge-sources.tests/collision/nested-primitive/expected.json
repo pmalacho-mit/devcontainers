@@ -1,6 +1,6 @@
 {
-  "parent": {
-    "child": {
+  "key": {
+    "nested": {
       "value": "hello"
     }
   }

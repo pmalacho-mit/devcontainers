@@ -4,7 +4,7 @@ set -euo pipefail
 # USAGE: list-sources.sh <file.json>
 # Recursively lists all files that are `extended` by the given JSON file,
 # Prints each file (one per line), in merge order, relative to the file.json's directory.
-# Includes the file itself at the end.
+# Includes the file itself at the end (so processing a file with no extends will simply print its own name).
 
 child="$1"
 base_dir="$(dirname "$child")"
