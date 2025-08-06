@@ -1,6 +1,0 @@
-{
-  "extends": [
-    "./customization.svelte.json",
-    "./devcontainer.typescript-default.json"
-  ]
-}
