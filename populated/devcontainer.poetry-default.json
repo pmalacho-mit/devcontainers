@@ -12,18 +12,27 @@
         },
         "editor.formatOnSave": true,
         "editor.tabSize": 2,
+        "python.defaultInterpreterPath": "${containerWorkspaceFolder}/.venv/bin/python",
         "python.formatting.blackArgs": [
           "--line-length=88"
         ],
-        "python.formatting.provider": "black"
+        "python.formatting.provider": "black",
+        "python.terminal.activateEnvInCurrentTerminal": true,
+        "python.venvPath": "${containerWorkspaceFolder}/.venv"
       }
     }
   },
   "features": {
+    "ghcr.io/devcontainers-extra/features/poetry:latest": {
+      "version": "latest"
+    },
     "ghcr.io/devcontainers/features/python:latest": {
       "version": "3.12"
     },
     "ghcr.io/pmalacho-mit/devcontainer-features/git-subrepo:latest": {}
   },
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04"
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+  "remoteEnv": {
+    "POETRY_VIRTUALENVS_IN_PROJECT": "true"
+  }
 }

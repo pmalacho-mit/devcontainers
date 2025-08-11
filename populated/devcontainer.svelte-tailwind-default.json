@@ -3,14 +3,20 @@
     "vscode": {
       "extensions": [
         "ms-vscode.vscode-typescript-next",
-        "esbenp.prettier-vscode"
+        "esbenp.prettier-vscode",
+        "svelte.svelte-vscode",
+        "bradlc.vscode-tailwindcss"
       ],
       "settings": {
+        "[svelte]": {
+          "editor.defaultFormatter": "svelte.svelte-vscode"
+        },
         "[typescript]": {
           "editor.defaultFormatter": "esbenp.prettier-vscode"
         },
         "editor.formatOnSave": true,
-        "editor.tabSize": 2
+        "editor.tabSize": 2,
+        "svelte.enable-ts-plugin": true
       }
     }
   },

@@ -8,7 +8,7 @@
     }
   },
   "features": {
-    "ghcr.io/devcontainers/features/node:1": {
+    "ghcr.io/devcontainers/features/node:latest": {
       "version": "20"
     },
     "ghcr.io/pmalacho-mit/devcontainer-features/git-subrepo:latest": {}
