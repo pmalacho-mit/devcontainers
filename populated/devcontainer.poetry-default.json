@@ -12,6 +12,7 @@
         },
         "editor.formatOnSave": true,
         "editor.tabSize": 2,
+        "python.analysis.typeCheckingMode": "standard",
         "python.defaultInterpreterPath": "${containerWorkspaceFolder}/.venv/bin/python",
         "python.formatting.blackArgs": [
           "--line-length=88"
