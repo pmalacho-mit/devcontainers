@@ -2,6 +2,7 @@
   "customizations": {
     "vscode": {
       "settings": {
+        "python.analysis.typeCheckingMode": "standard",
         "python.formatting.provider": "black",
         "python.formatting.blackArgs": [
           "--line-length=88"
