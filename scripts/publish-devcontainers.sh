@@ -46,11 +46,21 @@ for path in "${files[@]}"; do
   else
     echo "Branch does not exist. Creating orphan '$branch' with only the devcontainer."
     wt="$(mktemp -d)"
-    git worktree add --orphan "$branch" "$wt"
+    # Create a clean worktree, then switch to an orphan branch inside it
+    git worktree add --detach "$wt"
     pushd "$wt" >/dev/null
 
-    # Ensure empty tree (ignore errors if globs don't match)
-    rm -rf ./* .[^.]* || true
+    # Create orphan branch (no history)
+    if git switch --orphan "$branch"; then
+      :
+    else
+      # Fallback for older git
+      git checkout --orphan "$branch"
+    fi
+
+    # Remove any files brought in by the detached checkout
+    git rm -rf . >/dev/null 2>&1 || true
+    git clean -fdx >/dev/null 2>&1 || true
 
     mkdir -p .devcontainer
     cp "$GITHUB_WORKSPACE/$path" ".devcontainer/devcontainer.json"
