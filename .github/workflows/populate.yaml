@@ -16,3 +16,14 @@ jobs:
         with:
           commit_message: "chore: update populated devcontainers [skip ci]"
           file_pattern: 'populated/devcontainer.*.json'
+  publish-devcontainers:
+    needs: populate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository (full history)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
+      - name: Run publish-devcontainers.sh
+        run: ./scripts/publish-devcontainers.sh
