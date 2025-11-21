@@ -3,8 +3,10 @@
     "./image.ubuntu-24.json",
     "./feature.git-subrepo.json",
     "./feature.vim.json",
-    "./mount.ssh.json",
     "./customization.tab-size-2.json",
-    "./customization.format-on-save.json"
+    "./customization.format-on-save.json",
+    "./mount.ssh.json",
+    "./postCreateCommand.ignore-UseKeychain-in-ssh-config.json",
+    "./postCreateCommand.git-config-vim-as-core-editor.json"
   ]
 }

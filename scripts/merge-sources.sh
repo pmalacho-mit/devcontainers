@@ -25,13 +25,15 @@ for src in "$@"; do
 done
 
 jq -s '
-  def deep_merge($val1; $val2):
+  def is_command_key: test("Command$");
+  
+  def deep_merge($val1; $val2; $key):
     [($val1, $val2) | type] as $types |
     if $types == ["object", "object"] then
         # merge objects
         reduce ([($val1, $val2) | keys[]] | unique[]) as $k ({};
             if all($val1, $val2; has($k)) then
-                .[$k] = deep_merge($val1[$k]; $val2[$k])
+                .[$k] = deep_merge($val1[$k]; $val2[$k]; $k)
             else
                 .[$k] = ($val1[$k] // $val2[$k])
             end
@@ -39,15 +41,28 @@ jq -s '
     elif $types == ["array", "array"] then
         # both arrays, concatenate
         $val1 + $val2
+    elif ($key | is_command_key) and ($val1 != null) and ($val2 != null) then
+        # special handling for command fields: convert to array
+        [$val1, $val2]
     else
         # use default merge
-        $val1 // $val2
+        $val2 // $val1
     end
     ;
 
   # fold all inputs (base → … → child) through merge(), stripping any extends
   reduce .[] as $item (
     {};
-    deep_merge(. ; $item | del(.extends))
+    deep_merge(. ; $item | del(.extends); null)
+  )
+  |
+  # Special handling for command fields: join arrays with &&
+  # (applies to postCreateCommand, postStartCommand, postAttachCommand, etc.)
+  reduce (keys[] | select(test("Command$"))) as $key (.;
+    if (.[$key] | type) == "array" then
+      .[$key] = (.[$key] | map(select(. != null and . != "")) | join(" && "))
+    else
+      .
+    end
   )
 ' "${all_files[@]}"
