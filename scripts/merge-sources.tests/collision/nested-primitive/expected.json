@@ -1,7 +1,7 @@
 {
   "key": {
     "nested": {
-      "value": "hello"
+      "value": "world"
     }
   }
 }
