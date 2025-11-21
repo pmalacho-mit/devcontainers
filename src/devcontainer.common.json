@@ -2,6 +2,8 @@
   "extends": [
     "./image.ubuntu-24.json",
     "./feature.git-subrepo.json",
+    "./feature.vim.json",
+    "./mount.ssh.json",
     "./customization.tab-size-2.json",
     "./customization.format-on-save.json"
   ]
