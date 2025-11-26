@@ -42,8 +42,14 @@ jq -s '
         # both arrays, concatenate
         $val1 + $val2
     elif ($key | is_command_key) and ($val1 != null) and ($val2 != null) then
-        # special handling for command fields: convert to array
-        [$val1, $val2]
+        # special handling for command fields: convert to array or append to existing array
+        if ($val1 | type) == "array" then
+            $val1 + [$val2]
+        elif ($val2 | type) == "array" then
+            [$val1] + $val2
+        else
+            [$val1, $val2]
+        end
     else
         # use default merge
         $val2 // $val1
