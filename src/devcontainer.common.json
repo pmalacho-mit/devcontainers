@@ -7,6 +7,7 @@
     "./customization.format-on-save.json",
     "./mount.ssh.json",
     "./postCreateCommand.ignore-UseKeychain-in-ssh-config.json",
-    "./postCreateCommand.git-config-vim-as-core-editor.json"
+    "./postCreateCommand.git-config-vim-as-core-editor.json",
+    "./postCreateCommand.git-config-merge-divergent.json"
   ]
 }
