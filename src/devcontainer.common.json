@@ -5,6 +5,7 @@
     "./feature.vim.json",
     "./customization.tab-size-2.json",
     "./customization.format-on-save.json",
+    "./customization.markdown.json",
     "./mount.ssh.json",
     "./postCreateCommand.ignore-UseKeychain-in-ssh-config.json",
     "./postCreateCommand.git-config-vim-as-core-editor.json",
