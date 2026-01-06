@@ -8,6 +8,9 @@
         "bradlc.vscode-tailwindcss"
       ],
       "settings": {
+        "[markdown]": {
+          "editor.defaultFormatter": null
+        },
         "[svelte]": {
           "editor.defaultFormatter": "svelte.svelte-vscode"
         },
