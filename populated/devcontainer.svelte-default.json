@@ -7,6 +7,9 @@
         "svelte.svelte-vscode"
       ],
       "settings": {
+        "[markdown]": {
+          "editor.defaultFormatter": null
+        },
         "[svelte]": {
           "editor.defaultFormatter": "svelte.svelte-vscode"
         },
