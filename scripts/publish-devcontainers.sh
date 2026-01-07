@@ -26,11 +26,11 @@ documentation="populated/INSTALL.md"
   echo "without cloning the entire repository history, making it lightweight and fast."
   echo
   echo "The command structure:"
-  echo "\`bash <(curl <degit-url>)\` — Downloads and executes the degit utility"
-  echo "\`--destination .\` — Extracts files to the current directory"
-  echo "\`--repo pmalacho-mit/devcontainers\` — Specifies the source repository"
-  echo "\`--branch <branch-name>\` — Specifies which devcontainer configuration branch to use"
-  echo "\`--force\` — Overwrites existing \`.devcontainer/devcontainer.json\` if present"
+  echo "- \`bash <(curl https://suede.sh/utils/degit)\` — Downloads and executes the degit utility"
+  echo "- \`--destination .\` — Extracts files to the current directory"
+  echo "- \`--repo pmalacho-mit/devcontainers\` — Specifies the source repository"
+  echo "- \`--branch <branch-name>\` — Specifies which devcontainer configuration branch to use"
+  echo "- \`--force\` — Overwrites existing \`.devcontainer/devcontainer.json\` if present"
   echo
 } > "$documentation"
 
