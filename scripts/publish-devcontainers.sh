@@ -33,7 +33,7 @@ for path in "${files[@]}"; do
   {
     echo "## $base"
     echo '```bash'
-    echo "bash <(curl https://suede.sh/utils/degit) --destination . --repo pmalacho/mit --branch $branch --force"
+    echo "bash <(curl https://suede.sh/utils/degit) --destination . --repo pmalacho-mit/devcontainers --branch $branch --force"
     echo '```'
     echo
   } >> "$documentation"
