@@ -15,14 +15,14 @@ Why this is useful:
 
 [](./populated/INSTALL.md)
 <!-- p↓ BEGIN -->
-<!-- p↓ length lines: 56 chars: 2310 -->
+<!-- p↓ length lines: 56 chars: 2169 -->
 ## Install
 
 Copy the appropriate command below into your project repository root to install a devcontainer configuration.
 
-Each command uses the `degit` utility (from [suede](https://github.com/pmalacho-mit/suede)) to fetch the `.devcontainer/devcontainer.json` file from a specific branch
-of the `pmalacho-mit/devcontainers` repository. Unlike `git clone`, `degit` downloads only the files you need
-without cloning the entire repository history, making it lightweight and fast.
+Each command uses the `degit` utility (from [suede](https://github.com/pmalacho-mit/suede))
+to fetch the `.devcontainer/devcontainer.json` file from a specific branch
+of the `pmalacho-mit/devcontainers` repository.
 
 The command structure:
 - `bash <(curl https://suede.sh/utils/degit)` — Downloads and executes the degit utility
@@ -78,7 +78,7 @@ bash <(curl https://suede.sh/utils/degit) --destination . --repo pmalacho-mit/de
 
 [](./src/README.md)
 <!-- p↓ BEGIN -->
-<!-- p↓ length lines: 677 chars: 13036 -->
+<!-- p↓ length lines: 656 chars: 12709 -->
 ### Full Configs (`devcontainer.*.json`)
 
 Complete, composable devcontainer configurations that extend other files using the `extends` field.
@@ -596,27 +596,6 @@ Installs Vim editor.
     "ghcr.io/guiyomh/features/vim:0": {}
   }
 }
-```
-
-<!-- p↓ END -->
-
-#### feature.xclip.json
-
-Installs xclip for clipboard access in terminal environments.
-
-[](src/feature.xclip.json)
-<!-- p↓ BEGIN -->
-<!-- p↓ length lines: 12 chars: 136 -->
-
-```json
-{
-  "features": {
-    "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
-      "packages": "xclip"
-    },
-  }
-}
-
 ```
 
 <!-- p↓ END -->
