@@ -24,6 +24,9 @@
         "python.terminal.activateEnvInCurrentTerminal": true,
         "python.venvPath": "${containerWorkspaceFolder}/.venv"
       }
+    },
+    "pmalacho-mit/devcontainers": {
+      "ref": "devcontainer.poetry-default.json"
     }
   },
   "features": {
