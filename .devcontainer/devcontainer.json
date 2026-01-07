@@ -15,6 +15,9 @@
         "editor.formatOnSave": true,
         "editor.tabSize": 2
       }
+    },
+    "pmalacho-mit/devcontainers": {
+      "ref": "devcontainer.typescript-default.json"
     }
   },
   "features": {
