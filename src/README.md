@@ -148,12 +148,6 @@ Installs Vim editor.
 
 [](./feature.vim.json)
 
-## feature.xclip.json
-
-Installs xclip for clipboard access in terminal environments.
-
-[](./feature.xclip.json)
-
 # Images (`image.*.json`)
 
 Base container images for devcontainers.

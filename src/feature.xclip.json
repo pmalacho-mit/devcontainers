@@ -1,7 +1,0 @@
-{
-  "features": {
-    "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
-      "packages": "xclip"
-    },
-  }
-}
