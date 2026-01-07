@@ -11,6 +11,9 @@
         "editor.formatOnSave": true,
         "editor.tabSize": 2
       }
+    },
+    "pmalacho-mit/devcontainers": {
+      "ref": "devcontainer.docker-outside-of-docker.json"
     }
   },
   "features": {
