@@ -21,6 +21,9 @@
         ],
         "python.formatting.provider": "black"
       }
+    },
+    "pmalacho-mit/devcontainers": {
+      "ref": "devcontainer.python-default.json"
     }
   },
   "features": {
