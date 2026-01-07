@@ -7,11 +7,11 @@ of the `pmalacho-mit/devcontainers` repository. Unlike `git clone`, `degit` down
 without cloning the entire repository history, making it lightweight and fast.
 
 The command structure:
-`bash <(curl <degit-url>)` — Downloads and executes the degit utility
-`--destination .` — Extracts files to the current directory
-`--repo pmalacho-mit/devcontainers` — Specifies the source repository
-`--branch <branch-name>` — Specifies which devcontainer configuration branch to use
-`--force` — Overwrites existing `.devcontainer/devcontainer.json` if present
+- `bash <(curl https://suede.sh/utils/degit)` — Downloads and executes the degit utility
+- `--destination .` — Extracts files to the current directory
+- `--repo pmalacho-mit/devcontainers` — Specifies the source repository
+- `--branch <branch-name>` — Specifies which devcontainer configuration branch to use
+- `--force` — Overwrites existing `.devcontainer/devcontainer.json` if present
 
 ## devcontainer.common.json
 ```bash
