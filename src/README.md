@@ -185,6 +185,12 @@ Installs the `codeblockify` utility for converting files into Markdown code bloc
 
 Installs the `containersync` utility for syncing local devcontainer configs from the remote repository.
 
+To update your `.devcontainer/devcontainer.json` to the latest version from `pmalacho-mit/devcontainers`, simply run the following in your devcontainer's terminal (at the root of your project):
+
+```bash
+containersync
+```
+
 [](./postCreateCommand.containersync.json)
 
 ## postCreateCommand.git-config-merge-divergent.json
