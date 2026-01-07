@@ -19,6 +19,19 @@ documentation="populated/INSTALL.md"
 {
   echo "# Install"
   echo
+  echo "Copy the appropriate command below into your project repository root to install a devcontainer configuration."
+  echo
+  echo "Each command uses the \`degit\` utility (from [suede](https://github.com/pmalacho-mit/suede)) to fetch the \`.devcontainer/devcontainer.json\` file from a specific branch"
+  echo "of the \`pmalacho-mit/devcontainers\` repository. Unlike \`git clone\`, \`degit\` downloads only the files you need"
+  echo "without cloning the entire repository history, making it lightweight and fast."
+  echo
+  echo "The command structure:"
+  echo "\`bash <(curl <degit-url>)\` — Downloads and executes the degit utility"
+  echo "\`--destination .\` — Extracts files to the current directory"
+  echo "\`--repo pmalacho-mit/devcontainers\` — Specifies the source repository"
+  echo "\`--branch <branch-name>\` — Specifies which devcontainer configuration branch to use"
+  echo "\`--force\` — Overwrites existing \`.devcontainer/devcontainer.json\` if present"
+  echo
 } > "$documentation"
 
 for path in "${files[@]}"; do
