@@ -1,5 +1,18 @@
 # devcontainers
 
+Centralized, composable Dev Container configurations and tooling. 
+
+Source files in [`src/`](./src/) are layered via `extends` and merged into ready‑to‑install single files in [`populated/`](./populated/). 
+
+Install a configuration into any repo with a one‑liner (see [Install](#install)), and keep it up‑to‑date with a simple sync script (see [containersync](#postcreatecommandcontainersyncjson)).
+
+Why this is useful:
+- Consistent, reproducible environments across many projects and languages
+- Composable building blocks (`customization.*`, `feature.*`, `image.*`, `mount.*`) with deep merge
+- Opinionated VS Code settings and post-create automation baked in
+- One‑line install (no git history) via `degit` into `.devcontainer/devcontainer.json`
+- Easy updates: generated files carry a `customizations.pmalacho-mit/devcontainers.ref` you can resync with `containersync`
+
 [](./populated/INSTALL.md)
 <!-- p↓ BEGIN -->
 <!-- p↓ length lines: 56 chars: 2310 -->
@@ -677,6 +690,12 @@ Installs the `codeblockify` utility for converting files into Markdown code bloc
 #### postCreateCommand.containersync.json
 
 Installs the `containersync` utility for syncing local devcontainer configs from the remote repository.
+
+To update your `.devcontainer/devcontainer.json` to the latest version from `pmalacho-mit/devcontainers`, simply run the following in your devcontainer's terminal (at the root of your project):
+
+```bash
+containersync
+```
 
 [](src/postCreateCommand.containersync.json)
 <!-- p↓ BEGIN -->
