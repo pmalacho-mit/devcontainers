@@ -195,7 +195,7 @@ Installs the `containersync` utility for syncing local devcontainer configs from
 
 ## postCreateCommand.git-config-merge-divergent.json
 
-Configures Git to use rebase by default for merge operations.
+Configures Git to use merge (instead of rebase) when pulling divergent branches.
 
 [](./postCreateCommand.git-config-merge-divergent.json)
 
