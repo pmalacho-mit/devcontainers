@@ -15,5 +15,11 @@ mapfile -t files < <(find "$src_dir" -type f -name 'devcontainer.*.json' -print)
 # loop through each file and execute merge-sources.sh
 for file in "${files[@]}"; do
   merged_file="$populated_dir/$(basename "$file" .json).json"
-  "$self_dir/merge-sources.sh" "$file" > "$merged_file"
+  "$self_dir/merge-sources.sh" "$file" | jq --arg ref "$(basename "$file")" '
+    .customizations = (.customizations // {}) + {
+      "pmalacho-mit/devcontainers": {
+        "ref": $ref
+      }
+    }
+  ' > "$merged_file"
 done

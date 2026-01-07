@@ -15,6 +15,12 @@ if (( ${#files[@]} == 0 )); then
   exit 0
 fi
 
+documentation="populated/INSTALL.md"
+{
+  echo "# Install"
+  echo
+} > "$documentation"
+
 for path in "${files[@]}"; do
   base="$(basename "$path")"
   # Branch name is the bit between devcontainer. and .json
@@ -23,6 +29,14 @@ for path in "${files[@]}"; do
   branch="$name"
 
   echo "=== $base -> branch '$branch' ==="
+
+  {
+    echo "## $base"
+    echo '```bash'
+    echo "bash <(curl https://suede.sh/utils/degit) --destination . --repo pmalacho/mit --branch $branch --force"
+    echo '```'
+    echo
+  } >> "$documentation"
 
   if git ls-remote --exit-code --heads origin "$branch" >/dev/null 2>&1; then
     echo "Branch exists. Updating .devcontainer/devcontainer.json"
@@ -73,3 +87,12 @@ for path in "${files[@]}"; do
     git worktree remove "$wt" --force
   fi
 done
+
+# Commit/push INSTALL.md updates on current branch (expected: main)
+if git diff --quiet -- "$documentation"; then
+  echo "No changes to $documentation."
+else
+  git add "$documentation"
+  git commit -m "docs: update INSTALL.md"
+  git push origin HEAD
+fi
