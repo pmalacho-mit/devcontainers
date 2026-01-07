@@ -21,9 +21,9 @@ documentation="populated/INSTALL.md"
   echo
   echo "Copy the appropriate command below into your project repository root to install a devcontainer configuration."
   echo
-  echo "Each command uses the \`degit\` utility (from [suede](https://github.com/pmalacho-mit/suede)) to fetch the \`.devcontainer/devcontainer.json\` file from a specific branch"
-  echo "of the \`pmalacho-mit/devcontainers\` repository. Unlike \`git clone\`, \`degit\` downloads only the files you need"
-  echo "without cloning the entire repository history, making it lightweight and fast."
+  echo "Each command uses the \`degit\` utility (from [suede](https://github.com/pmalacho-mit/suede))" 
+  echo "to fetch the \`.devcontainer/devcontainer.json\` file from a specific branch"
+  echo "of the \`pmalacho-mit/devcontainers\` repository."
   echo
   echo "The command structure:"
   echo "- \`bash <(curl https://suede.sh/utils/degit)\` — Downloads and executes the degit utility"
