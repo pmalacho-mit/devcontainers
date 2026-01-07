@@ -47,3 +47,7 @@ bash <(curl https://suede.sh/utils/degit) --destination . --repo pmalacho-mit/de
 
 
 <!-- p↓ END -->
+
+# Details
+
+[](./src/README.md)
