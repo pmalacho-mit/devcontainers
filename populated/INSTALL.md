@@ -2,9 +2,9 @@
 
 Copy the appropriate command below into your project repository root to install a devcontainer configuration.
 
-Each command uses the `degit` utility (from [suede](https://github.com/pmalacho-mit/suede)) to fetch the `.devcontainer/devcontainer.json` file from a specific branch
-of the `pmalacho-mit/devcontainers` repository. Unlike `git clone`, `degit` downloads only the files you need
-without cloning the entire repository history, making it lightweight and fast.
+Each command uses the `degit` utility (from [suede](https://github.com/pmalacho-mit/suede))
+to fetch the `.devcontainer/devcontainer.json` file from a specific branch
+of the `pmalacho-mit/devcontainers` repository.
 
 The command structure:
 - `bash <(curl https://suede.sh/utils/degit)` — Downloads and executes the degit utility
