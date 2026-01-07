@@ -21,6 +21,9 @@
         "editor.tabSize": 2,
         "svelte.enable-ts-plugin": true
       }
+    },
+    "pmalacho-mit/devcontainers": {
+      "ref": "devcontainer.svelte-tailwind-default.json"
     }
   },
   "features": {
