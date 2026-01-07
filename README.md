@@ -78,7 +78,7 @@ bash <(curl https://suede.sh/utils/degit) --destination . --repo pmalacho-mit/de
 
 [](./src/README.md)
 <!-- p↓ BEGIN -->
-<!-- p↓ length lines: 656 chars: 12709 -->
+<!-- p↓ length lines: 662 chars: 12931 -->
 ### Full Configs (`devcontainer.*.json`)
 
 Complete, composable devcontainer configurations that extend other files using the `extends` field.
