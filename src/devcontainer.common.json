@@ -7,6 +7,7 @@
     "./customization.format-on-save.json",
     "./customization.markdown.json",
     "./mount.ssh.json",
+    "./opencode/initializeCommand.json",
     "./opencode/mount.json",
     "./opencode/postCreateCommand.json",
     "./postCreateCommand.ignore-UseKeychain-in-ssh-config.json",
