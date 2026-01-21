@@ -7,6 +7,8 @@
     "./customization.format-on-save.json",
     "./customization.markdown.json",
     "./mount.ssh.json",
+    "./opencode/mount.json",
+    "./opencode/postCreateCommand.json",
     "./postCreateCommand.ignore-UseKeychain-in-ssh-config.json",
     "./postCreateCommand.git-config-vim-as-core-editor.json",
     "./postCreateCommand.git-config-merge-divergent.json",
