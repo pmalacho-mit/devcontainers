@@ -21,6 +21,7 @@
     "ghcr.io/pmalacho-mit/devcontainer-features/git-subrepo:latest": {}
   },
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+  "initializeCommand": "mkdir -p ${HOME}/.local/share/opencode && touch ${HOME}/.local/share/opencode/auth.json",
   "mounts": [
     "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached",
     "source=${localEnv:HOME}${localEnv:USERPROFILE}/.local/share/opencode/auth.json,target=/home/vscode/.local/share/opencode/auth.json,type=bind,consistency=cached"
