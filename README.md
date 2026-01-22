@@ -78,7 +78,7 @@ bash <(curl https://suede.sh/utils/degit) --destination . --repo pmalacho-mit/de
 
 [](./src/README.md)
 <!-- p↓ BEGIN -->
-<!-- p↓ length lines: 665 chars: 13042 -->
+<!-- p↓ length lines: 669 chars: 13142 -->
 ### Full Configs (`devcontainer.*.json`)
 
 Complete, composable devcontainer configurations that extend other files using the `extends` field.
@@ -460,13 +460,16 @@ TypeScript-specific VS Code customizations including formatting and linting.
 
 [](src/customization.typescript.json)
 <!-- p↓ BEGIN -->
-<!-- p↓ length lines: 19 chars: 299 -->
+<!-- p↓ length lines: 23 chars: 399 -->
 
 ```json
 {
   "customizations": {
     "vscode": {
       "settings": {
+        "[javascript]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
         "[typescript]": {
           "editor.defaultFormatter": "esbenp.prettier-vscode"
         }
@@ -478,6 +481,7 @@ TypeScript-specific VS Code customizations including formatting and linting.
     }
   }
 }
+
 ```
 
 <!-- p↓ END -->
