@@ -8,6 +8,9 @@
         "bradlc.vscode-tailwindcss"
       ],
       "settings": {
+        "[javascript]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
         "[markdown]": {
           "editor.defaultFormatter": null
         },
