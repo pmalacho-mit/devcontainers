@@ -7,6 +7,9 @@
         "svelte.svelte-vscode"
       ],
       "settings": {
+        "[javascript]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
         "[markdown]": {
           "editor.defaultFormatter": null
         },
