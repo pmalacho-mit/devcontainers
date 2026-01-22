@@ -78,7 +78,7 @@ bash <(curl https://suede.sh/utils/degit) --destination . --repo pmalacho-mit/de
 
 [](./src/README.md)
 <!-- p↓ BEGIN -->
-<!-- p↓ length lines: 669 chars: 13142 -->
+<!-- p↓ length lines: 673 chars: 13213 -->
 ### Full Configs (`devcontainer.*.json`)
 
 Complete, composable devcontainer configurations that extend other files using the `extends` field.
@@ -438,7 +438,7 @@ Tailwind CSS IntelliSense and linting for VS Code.
 
 [](src/customization.tailwindcss.json)
 <!-- p↓ BEGIN -->
-<!-- p↓ length lines: 13 chars: 131 -->
+<!-- p↓ length lines: 17 chars: 202 -->
 
 ```json
 {
@@ -446,10 +446,14 @@ Tailwind CSS IntelliSense and linting for VS Code.
     "vscode": {
       "extensions": [
         "bradlc.vscode-tailwindcss"
-      ]
+      ],
+      "files.associations": {
+        "*.css": "tailwindcss"
+      }
     }
   }
 }
+
 ```
 
 <!-- p↓ END -->
