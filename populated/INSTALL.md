@@ -53,11 +53,6 @@ bash <(curl https://suede.sh/utils/degit) --destination . --repo pmalacho-mit/de
 bash <(curl https://suede.sh/utils/degit) --destination . --repo pmalacho-mit/devcontainers --branch svelte-tailwind-default --force
 ```
 
-## devcontainer.svelte-yjs-default.json
-```bash
-bash <(curl https://suede.sh/utils/degit) --destination . --repo pmalacho-mit/devcontainers --branch svelte-yjs-default --force
-```
-
 ## devcontainer.typescript-default.json
 ```bash
 bash <(curl https://suede.sh/utils/degit) --destination . --repo pmalacho-mit/devcontainers --branch typescript-default --force
