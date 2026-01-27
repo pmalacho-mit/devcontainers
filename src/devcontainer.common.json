@@ -14,6 +14,7 @@
     "./postCreateCommand.git-config-vim-as-core-editor.json",
     "./postCreateCommand.git-config-merge-divergent.json",
     "./postCreateCommand.codeblockify.json",
-    "./postCreateCommand.containersync.json"
+    "./postCreateCommand.containersync.json",
+    "./difftastic/postCreateCommand.json"
   ]
 }

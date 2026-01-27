@@ -66,7 +66,7 @@ jq -s '
   # (applies to postCreateCommand, postStartCommand, postAttachCommand, etc.)
   reduce (keys[] | select(test("Command$"))) as $key (.;
     if (.[$key] | type) == "array" then
-      .[$key] = (.[$key] | map(select(. != null and . != "")) | join(" && "))
+      .[$key] = (.[$key] | map(select(. != null and . != "")) | join(" && \\\n"))
     else
       .
     end
