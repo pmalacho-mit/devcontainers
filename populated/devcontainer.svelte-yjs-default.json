@@ -1,0 +1,7 @@
+{
+  "customizations": {
+    "pmalacho-mit/devcontainers": {
+      "ref": "devcontainer.svelte-yjs-default.json"
+    }
+  }
+}
