@@ -15,7 +15,7 @@ Why this is useful:
 
 [](./populated/INSTALL.md)
 <!-- p↓ BEGIN -->
-<!-- p↓ length lines: 56 chars: 2169 -->
+<!-- p↓ length lines: 61 chars: 2351 -->
 ## Install
 
 Copy the appropriate command below into your project repository root to install a devcontainer configuration.
@@ -64,6 +64,11 @@ bash <(curl https://suede.sh/utils/degit) --destination . --repo pmalacho-mit/de
 ### devcontainer.svelte-tailwind-default.json
 ```bash
 bash <(curl https://suede.sh/utils/degit) --destination . --repo pmalacho-mit/devcontainers --branch svelte-tailwind-default --force
+```
+
+### devcontainer.svelte-yjs-default.json
+```bash
+bash <(curl https://suede.sh/utils/degit) --destination . --repo pmalacho-mit/devcontainers --branch svelte-yjs-default --force
 ```
 
 ### devcontainer.typescript-default.json
