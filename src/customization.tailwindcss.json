@@ -3,7 +3,10 @@
     "vscode": {
       "extensions": [
         "bradlc.vscode-tailwindcss"
-      ]
+      ],
+      "files.associations": {
+        "*.css": "tailwindcss"
+      }
     }
   }
 }

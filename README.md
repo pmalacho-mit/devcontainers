@@ -78,7 +78,7 @@ bash <(curl https://suede.sh/utils/degit) --destination . --repo pmalacho-mit/de
 
 [](./src/README.md)
 <!-- p↓ BEGIN -->
-<!-- p↓ length lines: 665 chars: 13042 -->
+<!-- p↓ length lines: 673 chars: 13213 -->
 ### Full Configs (`devcontainer.*.json`)
 
 Complete, composable devcontainer configurations that extend other files using the `extends` field.
@@ -438,7 +438,7 @@ Tailwind CSS IntelliSense and linting for VS Code.
 
 [](src/customization.tailwindcss.json)
 <!-- p↓ BEGIN -->
-<!-- p↓ length lines: 13 chars: 131 -->
+<!-- p↓ length lines: 17 chars: 202 -->
 
 ```json
 {
@@ -446,10 +446,14 @@ Tailwind CSS IntelliSense and linting for VS Code.
     "vscode": {
       "extensions": [
         "bradlc.vscode-tailwindcss"
-      ]
+      ],
+      "files.associations": {
+        "*.css": "tailwindcss"
+      }
     }
   }
 }
+
 ```
 
 <!-- p↓ END -->
@@ -460,13 +464,16 @@ TypeScript-specific VS Code customizations including formatting and linting.
 
 [](src/customization.typescript.json)
 <!-- p↓ BEGIN -->
-<!-- p↓ length lines: 19 chars: 299 -->
+<!-- p↓ length lines: 23 chars: 399 -->
 
 ```json
 {
   "customizations": {
     "vscode": {
       "settings": {
+        "[javascript]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
         "[typescript]": {
           "editor.defaultFormatter": "esbenp.prettier-vscode"
         }
@@ -478,6 +485,7 @@ TypeScript-specific VS Code customizations including formatting and linting.
     }
   }
 }
+
 ```
 
 <!-- p↓ END -->
