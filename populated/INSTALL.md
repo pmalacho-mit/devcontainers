@@ -43,6 +43,11 @@ bash <(curl https://suede.sh/utils/degit) --destination . --repo pmalacho-mit/de
 bash <(curl https://suede.sh/utils/degit) --destination . --repo pmalacho-mit/devcontainers --branch svelte-default --force
 ```
 
+## devcontainer.svelte-docker-default.json
+```bash
+bash <(curl https://suede.sh/utils/degit) --destination . --repo pmalacho-mit/devcontainers --branch svelte-docker-default --force
+```
+
 ## devcontainer.svelte-tailwind-default.json
 ```bash
 bash <(curl https://suede.sh/utils/degit) --destination . --repo pmalacho-mit/devcontainers --branch svelte-tailwind-default --force

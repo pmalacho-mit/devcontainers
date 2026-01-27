@@ -6,5 +6,3 @@ echo 'Installing opencode on first use...'
 sudo rm -f /usr/local/bin/opencode
 
 curl -fsSL https://opencode.ai/install | bash && sudo chown -R vscode:vscode /home/vscode/.local
-
-opencode
