@@ -58,3 +58,8 @@ bash <(curl https://suede.sh/utils/degit) --destination . --repo pmalacho-mit/de
 bash <(curl https://suede.sh/utils/degit) --destination . --repo pmalacho-mit/devcontainers --branch typescript-default --force
 ```
 
+## devcontainer.typescript-docker-default.json
+```bash
+bash <(curl https://suede.sh/utils/degit) --destination . --repo pmalacho-mit/devcontainers --branch typescript-docker-default --force
+```
+
