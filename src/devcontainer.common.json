@@ -3,6 +3,8 @@
     "./image.ubuntu-24.json",
     "./feature.git-subrepo.json",
     "./feature.vim.json",
+    "./customization.claude.json",
+    "./customization.codex.json",
     "./customization.tab-size-2.json",
     "./customization.format-on-save.json",
     "./customization.markdown.json",
