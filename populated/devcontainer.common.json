@@ -1,6 +1,10 @@
 {
   "customizations": {
     "vscode": {
+      "extensions": [
+        "anthropic.claude-code",
+        "openai.chatgpt"
+      ],
       "settings": {
         "[markdown]": {
           "editor.defaultFormatter": null

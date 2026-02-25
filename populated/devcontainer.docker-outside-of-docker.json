@@ -2,6 +2,8 @@
   "customizations": {
     "vscode": {
       "extensions": [
+        "anthropic.claude-code",
+        "openai.chatgpt",
         "ms-azuretools.vscode-docker"
       ],
       "settings": {
