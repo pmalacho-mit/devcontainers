@@ -2,8 +2,7 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "anthropic.claude-code",
-        "openai.chatgpt"
+        "anthropic.claude-code"
       ],
       "settings": {
         "[markdown]": {
