@@ -3,7 +3,6 @@
     "vscode": {
       "extensions": [
         "anthropic.claude-code",
-        "openai.chatgpt",
         "ms-vscode.vscode-typescript-next",
         "esbenp.prettier-vscode",
         "ms-azuretools.vscode-docker"
