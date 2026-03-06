@@ -1,6 +1,7 @@
 {
   "extends": [
     "./devcontainer.python-default.json",
+    "./customization.poetry.json",
     "./customization.python-venv.json",
     "./feature.poetry.json"
   ]
