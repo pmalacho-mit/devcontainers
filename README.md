@@ -88,7 +88,7 @@ bash <(curl https://suede.sh/utils/degit) --destination . --repo pmalacho-mit/de
 
 [](./src/README.md)
 <!-- p↓ BEGIN -->
-<!-- p↓ length lines: 676 chars: 13292 -->
+<!-- p↓ length lines: 678 chars: 13328 -->
 ### Full Configs (`devcontainer.*.json`)
 
 Complete, composable devcontainer configurations that extend other files using the `extends` field.
@@ -231,16 +231,18 @@ Python devcontainer with Poetry dependency management.
 
 [](src/devcontainer.poetry-default.json)
 <!-- p↓ BEGIN -->
-<!-- p↓ length lines: 11 chars: 146 -->
+<!-- p↓ length lines: 13 chars: 182 -->
 
 ```json
 {
   "extends": [
     "./devcontainer.python-default.json",
+    "./customization.poetry.json",
     "./customization.python-venv.json",
     "./feature.poetry.json"
   ]
 }
+
 ```
 
 <!-- p↓ END -->
