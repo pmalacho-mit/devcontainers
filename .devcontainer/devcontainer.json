@@ -5,7 +5,8 @@
         "anthropic.claude-code",
         "ms-python.python",
         "ms-python.vscode-pylance",
-        "ms-python.black-formatter"
+        "ms-python.black-formatter",
+        "tamasfe.even-better-toml"
       ],
       "settings": {
         "[markdown]": {
