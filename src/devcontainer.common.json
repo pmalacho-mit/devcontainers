@@ -9,6 +9,7 @@
     "./customization.tab-size-2.json",
     "./customization.format-on-save.json",
     "./customization.markdown.json",
+    "./docker-outside-of-docker",
     "./mount.ssh.json",
     "./opencode/initializeCommand.json",
     "./opencode/mount.json",
@@ -18,6 +19,6 @@
     "./postCreateCommand.git-config-merge-divergent.json",
     "./postCreateCommand.codeblockify.json",
     "./postCreateCommand.containersync.json",
-    "./difftastic/postCreateCommand.json"
+    "./difftastic/postCreateCommand.json","
   ]
 }
