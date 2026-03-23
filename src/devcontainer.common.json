@@ -1,9 +1,9 @@
 {
   "extends": [
     "./image.ubuntu-24.json",
-    "./feature.git-cli.json",
     "./feature.git-lfs.json",
     "./feature.git-subrepo.json",
+    "./feature.github-cli.json",
     "./feature.vim.json",
     "./customization.claude.json",
     "./customization.tab-size-2.json",
