@@ -19,6 +19,6 @@
     "./postCreateCommand.git-config-merge-divergent.json",
     "./postCreateCommand.codeblockify.json",
     "./postCreateCommand.containersync.json",
-    "./difftastic/postCreateCommand.json","
+    "./difftastic/postCreateCommand.json"
   ]
 }
