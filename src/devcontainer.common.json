@@ -1,6 +1,7 @@
 {
   "extends": [
     "./image.ubuntu-24.json",
+    "./feature.git-cli.json",
     "./feature.git-lfs.json",
     "./feature.git-subrepo.json",
     "./feature.vim.json",
