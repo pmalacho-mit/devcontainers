@@ -18,6 +18,7 @@
   },
   "features": {
     "ghcr.io/devcontainers/features/git-lfs:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {},
     "ghcr.io/guiyomh/features/vim:0": {},
     "ghcr.io/pmalacho-mit/devcontainer-features/git-subrepo:latest": {}
   },
