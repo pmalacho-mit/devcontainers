@@ -88,7 +88,7 @@ bash <(curl https://suede.sh/utils/degit) --destination . --repo pmalacho-mit/de
 
 [](./src/README.md)
 <!-- p↓ BEGIN -->
-<!-- p↓ length lines: 683 chars: 13491 -->
+<!-- p↓ length lines: 682 chars: 13458 -->
 ### Full Configs (`devcontainer.*.json`)
 
 Complete, composable devcontainer configurations that extend other files using the `extends` field.
@@ -99,13 +99,12 @@ Base configuration shared by all devcontainers. Includes common features, custom
 
 [](src/devcontainer.common.json)
 <!-- p↓ BEGIN -->
-<!-- p↓ length lines: 30 chars: 865 -->
+<!-- p↓ length lines: 29 chars: 832 -->
 
 ```json
 {
   "extends": [
     "./image.ubuntu-24.json",
-    "./feature.bubblewrap.json",
     "./feature.git-lfs.json",
     "./feature.git-subrepo.json",
     "./feature.github-cli.json",
