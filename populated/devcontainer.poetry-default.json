@@ -57,10 +57,6 @@
   "remoteEnv": {
     "POETRY_VIRTUALENVS_IN_PROJECT": "true"
   },
-  "runArgs": [
-    "--cap-drop=DAC_OVERRIDE",
-    "--cap-drop=DAC_READ_SEARCH"
-  ],
   "workspaceFolder": "${localWorkspaceFolder}",
   "workspaceMount": "source=${localWorkspaceFolder},target=${localWorkspaceFolder},type=bind"
 }
