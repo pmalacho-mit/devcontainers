@@ -1,6 +1,7 @@
 {
   "extends": [
     "./image.ubuntu-24.json",
+    "./feature.bubblewrap.json",
     "./feature.git-lfs.json",
     "./feature.git-subrepo.json",
     "./feature.github-cli.json",
