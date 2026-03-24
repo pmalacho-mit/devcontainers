@@ -88,7 +88,7 @@ bash <(curl https://suede.sh/utils/degit) --destination . --repo pmalacho-mit/de
 
 [](./src/README.md)
 <!-- p↓ BEGIN -->
-<!-- p↓ length lines: 683 chars: 13499 -->
+<!-- p↓ length lines: 682 chars: 13458 -->
 ### Full Configs (`devcontainer.*.json`)
 
 Complete, composable devcontainer configurations that extend other files using the `extends` field.
@@ -99,7 +99,7 @@ Base configuration shared by all devcontainers. Includes common features, custom
 
 [](src/devcontainer.common.json)
 <!-- p↓ BEGIN -->
-<!-- p↓ length lines: 30 chars: 873 -->
+<!-- p↓ length lines: 29 chars: 832 -->
 
 ```json
 {
@@ -123,8 +123,7 @@ Base configuration shared by all devcontainers. Includes common features, custom
     "./postCreateCommand.git-config-merge-divergent.json",
     "./postCreateCommand.codeblockify.json",
     "./postCreateCommand.containersync.json",
-    "./difftastic/postCreateCommand.json",
-    "./runArgs.strict-file-access.json"
+    "./difftastic/postCreateCommand.json"
   ]
 }
 
