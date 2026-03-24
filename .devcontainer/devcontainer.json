@@ -42,6 +42,7 @@
       "version": "20"
     },
     "ghcr.io/guiyomh/features/vim:0": {},
+    "ghcr.io/pmalacho-mit/devcontainer-features/bubblewrap:latest": {},
     "ghcr.io/pmalacho-mit/devcontainer-features/git-subrepo:latest": {}
   },
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
