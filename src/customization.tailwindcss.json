@@ -6,6 +6,11 @@
       ],
       "files.associations": {
         "*.css": "tailwindcss"
+      },
+      "settings": {
+        "tailwindCSS.experimental.classRegex": [
+          ["\\/\\*\\s?tw:\\s?\\*\\/\\s?['\"`]([^'\"`]*)['\"`]"]
+        ]
       }
     }
   }
