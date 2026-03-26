@@ -15,7 +15,7 @@ Why this is useful:
 
 [](./populated/INSTALL.md)
 <!-- p↓ BEGIN -->
-<!-- p↓ length lines: 66 chars: 2553 -->
+<!-- p↓ length lines: 71 chars: 2737 -->
 ## Install
 
 Copy the appropriate command below into your project repository root to install a devcontainer configuration.
@@ -79,6 +79,11 @@ bash <(curl https://suede.sh/utils/degit) --destination . --repo pmalacho-mit/de
 ### devcontainer.typescript-docker-default.json
 ```bash
 bash <(curl https://suede.sh/utils/degit) --destination . --repo pmalacho-mit/devcontainers --branch typescript-docker-default --force
+```
+
+### devcontainer.typescript-tailwind.json
+```bash
+bash <(curl https://suede.sh/utils/degit) --destination . --repo pmalacho-mit/devcontainers --branch typescript-tailwind --force
 ```
 
 
