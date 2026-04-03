@@ -68,3 +68,8 @@ bash <(curl https://suede.sh/utils/degit) --destination . --repo pmalacho-mit/de
 bash <(curl https://suede.sh/utils/degit) --destination . --repo pmalacho-mit/devcontainers --branch typescript-tailwind --force
 ```
 
+## devcontainer.youtube.json
+```bash
+bash <(curl https://suede.sh/utils/degit) --destination . --repo pmalacho-mit/devcontainers --branch youtube --force
+```
+
