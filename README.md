@@ -103,7 +103,7 @@ bash <(curl https://suede.sh/utils/degit) --destination . --repo pmalacho-mit/de
 
 [](./src/README.md)
 <!-- p↓ BEGIN -->
-<!-- p↓ length lines: 685 chars: 13545 -->
+<!-- p↓ length lines: 686 chars: 13547 -->
 ### Full Configs (`devcontainer.*.json`)
 
 Complete, composable devcontainer configurations that extend other files using the `extends` field.
@@ -150,15 +150,16 @@ Node.js-focused devcontainer with common Node setup.
 
 [](src/devcontainer.node-default.json)
 <!-- p↓ BEGIN -->
-<!-- p↓ length lines: 10 chars: 99 -->
+<!-- p↓ length lines: 11 chars: 100 -->
 
 ```json
 {
   "extends": [
     "./devcontainer.common.json",
-    "./feature.node-20.json"
+    "./feature.node-24.json"
   ]
 }
+
 ```
 
 <!-- p↓ END -->
