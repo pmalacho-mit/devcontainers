@@ -6,6 +6,7 @@
     "./feature.github-cli.json",
     "./feature.vim.json",
     "./customization.claude.json",
+    "./customization.copilot.json",
     "./customization.tab-size-2.json",
     "./customization.format-on-save.json",
     "./customization.markdown.json",
